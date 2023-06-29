@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		nav{
+			background:black;
+			height: 80px;
+			width: 100%;
+			display: flex;
+			
+		}
+
+		nav h1{
+			color: white;
+			padding:20px;
+			font-weight: 100;
+			font-family: serif;
+			position: relative;
+			left: 40%;
+
+
+		}
+		.banner{
+			width: 100%;
+			height: 100vh;
+			background: url(bagg5.jpg);
+			background-size: cover;
+			background-position: center;
+
+		}
+		.navbar{
+			width: 100%;
+			margin: auto;
+			padding: 5, 0px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+		}
+
+		.logo{
+			width: 120px;
+			cursor: pointer;
+			border-radius: 20px;
+			margin-top: 15px;
+			margin-left: 10px;
+		}
+		.navbar ul li{
+			list-style: none;
+			display: inline-block;
+			margin: 0 20px;
+			position: relative;
+
+		}
+		.navbar ul li a{
+			text-decoration: none;
+			color:whitesmoke;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-weight: 100;
+		}
+		.navbar ul li ::after{
+			content: '';
+			height: 3px;
+			width: 0%;
+			background: white;
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			transition: 0.3s;
+		}
+		.navbar ul li :hover::after{
+			width: 100%;
+		}
+		.content{
+			width: 100%;
+			position: absolute;
+			text-align: center;
+			top: 80%;
+			color: #fff;
+
+		}
+
+		.content h1{
+			font-size: 45px;
+			margin-top: 1px;
+			font-family: cursive;
+			color:honeydew;
+
+			}
+
+		.content p{
+			margin: 20px auto;
+			font-weight: 100;
+			line-height: 25px;
+			font-size: 20px;
+			font-family: cursive;
+			color:greenyellow;
+
+		}
+
+		.time{
+			color: white;
+
+		
+		}
+		.date{
+			color: white;
+		}
+
+		#time{
+			color: white;
+
+		}
+		#date{
+			color: white;
+		}
+		.time_date{
+			padding-right: 20px;
+			position: relative;
+			right: 25%;
+		}
+		.footer{
+			background: black;
+			margin-top: 10px;
+			height: 200px;
+			width: 100%;
+			
+
+		}
+		.container{
+			max-width: 1170px;
+			margin:auto;
+
+		}
+		.footer ul{
+			list-style: none;
+			color: white;
+
+		}
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.footer-col{
+			width: 25%;
+			padding: 0 15px;
+		}
+		.footer h1{
+			color: white;
+			font-family: cursive;
+		}
+		.media a{
+			color: white;
+			margin-right:30px;
+			font-size: 30px;
+
+		}
+		.media a:hover{
+			transition: 0.3s ease;
+			color: blue;
+
+		}
+
+	</style>
+	<!-- <script>
+    function updateDateTime() {
+      var currentDate = new Date();
+      var dateElement = document.getElementById("date");
+      var timeElement = document.getElementById("time");
+
+      // Format the date
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = currentDate.toLocaleDateString(undefined, options);
+
+      // Format the time
+      var formattedTime = currentDate.toLocaleTimeString();
+
+      // Update the HTML elements
+      dateElement.innerHTML = formattedDate;
+      timeElement.innerHTML = formattedTime;
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+
+    
+  </script> -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<script>
+	$("li").hover(
+		function(){
+			$( this ).append($("<span> ***</span>"));
+
+		},function(){
+			$( this ).find("soan:last").remove();
+		}
+		);
+	$("li.fade").hover(function(){
+		$(this).fadeOut(100);
+		$(this).fadeIn(500);
+
+	});
+</script>
+
+
+<body>
+	<nav>
+		<h1> About Bhutan Transportation</h1>
+		<p></p>
+<div class="time_date">
+	<p class="date">Date: <span id="date"></span></p>
+    <p class="time">Time: <span id="time"></span></p>
+</div>
+	</nav>
+
+	<br><br>
+	<div class="banner">
+		<div class="navbar">
+			<img class="logo" src="C:\Users\DSP\Documents\transportation bhutan\bhutan.jpg">
+			<ul>
+				<li><a href="contact us.html">contact us</a></li>
+				<li><a href="about us.html">about us</a></li>
+				<li><a href="history.html">history</a></li>
+				<li><a href="service.html">services</a></li>
+			</ul>
+			
+		</div>
+		<div class="content">
+			<h1>Transportation</h1>
+			<p>Road construction began in earnest during the First Development Plan (1961–66). <br>The first 175-kilometre-long (109 mi)paved road was completed in 1962.</p>
+		
+		</div><br><br>
+
+	</div>
+	<!-- <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h1>Group Member</h1>
+					<ul>
+						<li>Sonam dema</li>
+						<li>Ugyen Dorji</li>
+						<li>Manoj Bhujel</li>
+					</ul>
+					
+				</div>
+
+				<div class="footer-col">
+					<h1>follow us</h1>
+					<div class="media">
+					
+						<a href=""><i class="fab fa-facebook-f"></i></a>
+							<a href=""><i class="fab fa-twitter"></i></a>
+								<a href=""><i class="fab fa-instagram"></i></a>
+									<a href=""><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>	
+			
+		</div>
+
+		
+	</footer> -->
+
+</body>
+</html>
